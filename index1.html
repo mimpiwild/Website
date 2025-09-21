@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <link rel="stylesheet" href="https://use.typekit.net/kub6mmh.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mimpiwild</title>
+
+  <!-- Font + Icons -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Slick Carousel CSS -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+
+  <!-- Ton CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">
+      <img src="Photos/Logo.png" alt="Logo Mimpiwild">
+      <span>Mimpiwild</span>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="#hero">Collections</a></li>
+        <li><a href="#about">Shop</a></li>
+        <li><a href="#drawings">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="social-icons">
+      <a href="https://www.instagram.com/mimpi.wild?igsh=MTI1YnEwZnZxbHFwYQ%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+      <a href="#"><i class="fa-brands fa-facebook"></i></a>
+      <a href="#"><i class="fa-brands fa-twitter"></i></a>
+      <a href="#"><i class="fa-solid fa-cart-shopping"></i> 0</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="hero"></section>
+
+  
+  <!-- DESSINS -->
+<section class="drawings-carousel" id="drawings">
+  <h2>Collections</h2>
+
+  <div class="carousel" aria-label="Carousel de dessins">
+    <div class="carousel-slide">
+      <img src="Photos/Tableau_.jpg" alt="Cœur d’artichaut">
+      <div class="ribbon">Cœur d’Artichaut</div>
+    </div>
+    <div class="carousel-slide">
+      <img src="Photos/Pearl.jpg" alt="Médusa">
+      <div class="ribbon">Médusa</div>
+    </div>
+    <div class="carousel-slide">
+      <img src="Photos/Âme_Ours.jpg" alt="Totem">
+      <div class="ribbon">Totem</div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- A PROPOS -->
+  <section class="about" id="about">
+    <h2>Notre histoire</h2>
+    <p>Chez Mimpiwild, nous aimons apporter l'art chez vous. Chaque dessin et illustration est sélectionné avec soin pour enrichir votre espace et éveiller votre créativité.</p>
+    <p>Notre mission est de transformer vos murs en véritables galeries personnelles, offrant inspiration et beauté au quotidien.</p>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="contact-wrapper">
+      <!-- Formulaire -->
+      <div class="contact-form-box">
+        <h3>Contactez-nous</h3>
+        <form id="contact-form" class="contact-form" action="" method="post" novalidate>
+          <div class="form-row">
+            <input type="text" id="contact_firstname" name="contact_firstname" placeholder="Prénom" required>
+            <input type="text" id="contact_lastname" name="contact_lastname" placeholder="Nom" required>
+          </div>
+
+          <div style="margin-bottom:12px;">
+            <input type="email" id="contact_email" name="contact_email" placeholder="Email (optionnel)">
+          </div>
+
+          <div>
+            <textarea id="contact_message" name="contact_message" placeholder="Votre message" required></textarea>
+          </div>
+
+          <button type="submit" class="btn-submit">Envoyer le message</button>
+        </form>
+      </div>
+
+      <!-- Adresse -->
+      <div class="address-box">
+        <h4>Contact Us</h4>
+        <p>Pour toute commande ou question, écrivez-nous ou appelez-nous — nous répondons rapidement.</p>
+        <address>
+          Mimpiwild<br>
+          173, rue Véron<br>
+          94140 Alfortville<br>
+          France
+        </address>
+        <p style="margin-top:14px;"><strong>Téléphone:</strong> +33 6 19 08 20 78</p>
+        <p><strong>Email:</strong> mimpiwild@hotmail.com</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

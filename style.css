@@ -1,0 +1,251 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'quasimoda', sans-serif;
+  background-color: #000;
+  color: #fff;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* ================= HEADER ================= */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 40px;
+  position: fixed;           /* header fixe en haut */
+  top: 0;                    
+  left: 0;
+  width: 100%;               
+  background: url("Photos/9.jpg") center/cover no-repeat;
+  z-index: 999;              
+}
+
+.logo { display:flex; align-items:center; gap:12px; font-weight:600; font-size:20px; }
+.logo img { height:38px; display:block; }
+
+nav ul { display:flex; list-style:none; gap:28px; align-items:center; }
+nav a { color:#fff; text-decoration:none; font-size:15px; opacity:0.95; }
+nav a:hover { color:#f0a500; }
+
+.social-icons { display:flex; gap:12px; align-items:center; }
+.social-icons a { color:#fff; font-size:16px; text-decoration:none; }
+
+/* ================= HERO ================= */
+.hero {
+  position: relative;
+  height: 108vh;
+  background: 
+    url("Photos/Motif.png") center/cover repeat,
+    url("Photos/Fond.jpg") center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 250px;
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 60%, #000 100%);
+}
+
+/* ================= CAROUSEL ================= */
+.drawings-carousel {
+  padding:70px 0 60px 0;
+  background-color:#000;
+  text-align:center;
+}
+.drawings-carousel h2 {
+  font-size:28px;
+  margin-bottom:28px;
+  font-weight:600;
+  letter-spacing:0.2px;
+}
+.carousel { width:90%; margin:0 auto; position:relative; }
+
+/* Flèches custom */
+.custom-prev, .custom-next {
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  width:44px;
+  height:44px;
+  border-radius:50%;
+  border:none;
+  background: rgba(255,255,255,0.12);
+  color:#fff;
+  z-index:5;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  font-size:20px;
+}
+.custom-prev { left:8px; }
+.custom-next { right:8px; }
+.custom-prev:hover, .custom-next:hover { background: rgba(255,255,255,0.2); }
+
+.carousel .slick-slide { display:flex; align-items:center; justify-content:center; }
+.carousel .slick-slide img {
+  height:220px;
+  max-width:100%;
+  border-radius:10px;
+  object-fit:cover;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.6);
+}
+
+/* ================= ABOUT ================= */
+.about {
+  padding:80px 50px;
+  background-color:#000;
+  text-align:center;
+}
+.about h2 { font-size:30px; margin-bottom:18px; }
+.about p { max-width:780px; margin:0 auto 14px; font-size:17px; line-height:1.6; color:#ddd; }
+
+/* ================= CONTACT ================= */
+.contact {
+  padding:70px 50px;
+  background-color:#111;
+}
+.contact .contact-wrapper {
+  display:flex;
+  gap:40px;
+  width:90%;
+  margin:0 auto;
+  align-items:flex-start;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+
+/* Formulaire */
+.contact .contact-form-box {
+  flex:1 1 420px;
+  background: #0f0f0f;
+  padding:24px;
+  border-radius:8px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+}
+.contact .contact-form-box h3 { color:#fff; margin-bottom:16px; font-size:20px; }
+.contact .form-row { display:flex; gap:12px; margin-bottom:12px; }
+.contact input[type="text"],
+.contact input[type="email"],
+.contact textarea {
+  width:100%;
+  padding:12px 14px;
+  border-radius:6px;
+  border:1px solid rgba(255,255,255,0.08);
+  background:#fff;
+  color:#000;
+  font-size:15px;
+  outline:none;
+}
+.contact textarea { min-height:140px; resize:vertical; }
+.contact .btn-submit {
+  display:inline-block;
+  margin-top:10px;
+  padding:10px 18px;
+  background:#f0a500;
+  color:#000;
+  border:none;
+  border-radius:6px;
+  font-weight:600;
+  cursor:pointer;
+}
+
+/* Adresse */
+.contact .address-box {
+  flex: 0 0 320px;
+  background:#0b0b0b;
+  padding:22px;
+  border-radius:8px;
+  color:#ddd;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+}
+.address-box h4 { margin-bottom:14px; color:#fff; }
+.address-box address { font-style:normal; line-height:1.6; color:#ccc; }
+
+/* ================= RESPONSIVE ================= */
+@media (max-width:900px) {
+  .carousel .slick-slide img { height:180px; }
+  .contact .contact-wrapper { gap:18px; }
+}
+@media (max-width:600px) {
+  nav ul { gap:12px; font-size:14px; }
+  .custom-prev, .custom-next { width:36px; height:36px; font-size:18px; }
+  .carousel .slick-slide img { height:150px; }
+  .contact .contact-wrapper { flex-direction:column; align-items:stretch; }
+  .address-box { order:2; }
+}
+
+/* Images du carrousel */
+.carousel .slick-slide img {
+  width: 300px;          /* plus large */
+  height: 450px;         /* plus haut, garde le ratio portrait */
+  object-fit: cover;
+  border-radius: 50px;
+  border: 1px solid #ffffff; /* liseret blanc */
+  box-shadow: 0 6px 18px rgba(0,0,0,0.6);
+  margin: 0 auto;
+  display: block;
+}
+
+
+/* Conteneur du slide pour positionner le ruban */
+.carousel-slide {
+  position: relative; 
+  display: inline-block;
+}
+
+.carousel-slide .ribbon {
+  position: absolute;
+  bottom: 50px;                        /* 10px du bas de l'image */
+  left: 50%;                            /* centré horizontalement */
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.6); /* blanc légèrement transparent */
+  color: #000;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 25px;
+  text-align: center;
+  width: 100%;                           /* occupe presque toute la largeur de l'image */
+  max-width: 280px;                      /* légèrement plus petit que 300px pour ne pas toucher les bords */
+  box-sizing: border-box;
+}
+#drawings {
+  position: relative;
+  padding: 80px 0;                       /* espace autour du carousel */
+  background: url("Photos/2.jpg") center/cover no-repeat;  /* image de fond */
+  background-attachment: fixed;          /* effet parallax léger si scroll */
+  background-position: center;
+  background-size: cover;
+  color: #fff;                            /* texte visible */
+}
+
+#drawings::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);  /* foncé semi-transparent pour contraste */
+  z-index: 0;
+}
+
+#drawings h2,
+#drawings .carousel {
+  position: relative;
+  z-index: 1;  /* texte et carousel au-dessus de l'overlay */
+}
+
+
+
+
+
+
+
