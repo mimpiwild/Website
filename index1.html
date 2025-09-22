@@ -20,30 +20,44 @@
 <body>
 
   <!-- HEADER -->
-  <header>
-    <div class="logo">
-      <img src="Photos/Logo.png" alt="Logo Mimpiwild">
-      <span>Mimpiwild</span>
-    </div>
+<header>
+  <!-- Logo -->
+  <div class="logo">
+    <img src="Photos/Logo blc.png" alt="Logo Mimpiwild">
+    <span>Mimpiwild</span>
+  </div>
 
-    <nav>
-      <ul>
-        <li><a href="#hero">Collections</a></li>
-        <li><a href="#about">Shop</a></li>
-        <li><a href="#drawings">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+  <!-- Menu -->
+<nav>
+  <ul>
+    <li><a href="#hero" data-i18n="collections">Collections</a></li>
+    <li><a href="#about" data-i18n="shop">Boutique</a></li>
+    <li><a href="#drawings" data-i18n="about">À propos</a></li>
+    <li><a href="#contact" data-i18n="contact">Contact</a></li>
+  </ul>
+</nav>
 
-    <div class="social-icons">
-      <a href="https://www.instagram.com/mimpi.wild?igsh=MTI1YnEwZnZxbHFwYQ%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer">
-        <i class="fa-brands fa-instagram"></i>
-      </a>
-      <a href="#"><i class="fa-brands fa-facebook"></i></a>
-      <a href="#"><i class="fa-brands fa-twitter"></i></a>
-      <a href="#"><i class="fa-solid fa-cart-shopping"></i> 0</a>
-    </div>
-  </header>
+
+
+
+  <!-- Barre de recherche + drapeaux -->
+  <div class="header-right">
+    <!-- Barre de recherche -->
+    <form class="search-form" action="#" method="get">
+      <input type="text" id="search-input" placeholder="Rechercher..." data-i18n-placeholder="searchPlaceholder" />
+      <button type="submit">🔍</button>
+    </form>
+
+    <!-- Choix de langue -->
+    <div class="language-switch">
+  <a href="#" data-lang="fr" title="Français">FR</a>
+  <span class="separator">|</span>
+  <a href="#" data-lang="en" title="English">EN</a>
+</div>
+
+  </div>
+</header>
+
 
   <!-- HERO -->
   <section class="hero" id="hero"></section>
@@ -51,70 +65,88 @@
   
   <!-- DESSINS -->
 <section class="drawings-carousel" id="drawings">
-  <h2>Collections</h2>
+  <h2 data-i18n="collections">Collections</h2>
 
   <div class="carousel" aria-label="Carousel de dessins">
     <div class="carousel-slide">
       <img src="Photos/Tableau_.jpg" alt="Cœur d’artichaut">
-      <div class="ribbon">Cœur d’Artichaut</div>
+      <div class="ribbon" data-i18n="artichaut">Cœur d’Artichaut</div>
     </div>
     <div class="carousel-slide">
       <img src="Photos/Pearl.jpg" alt="Médusa">
-      <div class="ribbon">Médusa</div>
+      <div class="ribbon" data-i18n="medusa">Médusa</div>
     </div>
     <div class="carousel-slide">
-      <img src="Photos/Âme_Ours.jpg" alt="Totem">
-      <div class="ribbon">Totem</div>
+      <img src="Photos/Âme_Ours.jpg" alt="Totem">
+      <div class="ribbon" data-i18n="totem"> Animal Totem</div>
+    </div>
+    <div class="carousel-slide">
+      <img src="Photos/Medusa-4.jpg" alt="Medusa">
+      <div class="ribbon" data-i18n="medusa">Medusa</div>
     </div>
   </div>
 </section>
 
 
+<!-- Barre horizontale noire -->
+<hr class="section-divider">
+
   <!-- A PROPOS -->
-  <section class="about" id="about">
-    <h2>Notre histoire</h2>
-    <p>Chez Mimpiwild, nous aimons apporter l'art chez vous. Chaque dessin et illustration est sélectionné avec soin pour enrichir votre espace et éveiller votre créativité.</p>
-    <p>Notre mission est de transformer vos murs en véritables galeries personnelles, offrant inspiration et beauté au quotidien.</p>
-  </section>
+<section class="about" id="about">
+  <h2>À propos</h2> <!-- titre au-dessus du texte -->
+  <div class="about-wrapper">
+    <!-- Texte à gauche -->
+    <div class="about-text">
+      <p>Portée par ses voyages, Mimpiwild, "rêve sauvage", a été fondé par Yuna Walter. esprit libre. </p>
+      <p>L'artiste nous transporte dans son univers onirique, inspirée par le monde animalier, la nature. mythologie, littérature, poésie  </p>
+      <p></p>
+      
+    </div>
+
+    <!-- Image encadrée à droite -->
+    <div class="about-image">
+      <img src="Photos/8.jpg" alt="Image à propos">
+    </div>
+  </div>
+</section>
+
+<!-- Barre horizontale noire -->
+<hr class="section-divider">
 
   <!-- CONTACT -->
-  <section class="contact" id="contact">
-    <div class="contact-wrapper">
-      <!-- Formulaire -->
-      <div class="contact-form-box">
-        <h3>Contactez-nous</h3>
-        <form id="contact-form" class="contact-form" action="" method="post" novalidate>
-          <div class="form-row">
-            <input type="text" id="contact_firstname" name="contact_firstname" placeholder="Prénom" required>
-            <input type="text" id="contact_lastname" name="contact_lastname" placeholder="Nom" required>
-          </div>
-
-          <div style="margin-bottom:12px;">
-            <input type="email" id="contact_email" name="contact_email" placeholder="Email (optionnel)">
-          </div>
-
-          <div>
-            <textarea id="contact_message" name="contact_message" placeholder="Votre message" required></textarea>
-          </div>
-
-          <button type="submit" class="btn-submit">Envoyer le message</button>
-        </form>
-      </div>
-
-      <!-- Adresse -->
-      <div class="address-box">
-        <h4>Contact Us</h4>
-        <p>Pour toute commande ou question, écrivez-nous ou appelez-nous — nous répondons rapidement.</p>
-        <address>
-          Mimpiwild<br>
-          173, rue Véron<br>
-          94140 Alfortville<br>
-          France
-        </address>
-        <p style="margin-top:14px;"><strong>Téléphone:</strong> +33 6 19 08 20 78</p>
-        <p><strong>Email:</strong> mimpiwild@hotmail.com</p>
-      </div>
+<section class="contact" id="contact">
+  <h2>Contact</h2> <!-- titre au-dessus -->
+  <div class="contact-wrapper">
+    
+    <!-- Image à gauche -->
+    <div class="contact-image">
+      <img src="Photos/danseuse.png" alt="Danseuse">
     </div>
+
+    <!-- Formulaire à droite -->
+    <div class="contact-form-box">
+      <h3>Contactez-nous</h3>
+      <form id="contact-form" class="contact-form" action="" method="post" novalidate>
+        <div class="form-row">
+          <input type="text" id="contact_firstname" name="contact_firstname" placeholder="Prénom" required>
+          <input type="text" id="contact_lastname" name="contact_lastname" placeholder="Nom" required>
+        </div>
+
+        <div style="margin-bottom:12px;">
+          <input type="email" id="contact_email" name="contact_email" placeholder="Email (optionnel)">
+        </div>
+
+        <div>
+          <textarea id="contact_message" name="contact_message" placeholder="Votre message" required></textarea>
+        </div>
+
+        <button type="submit" class="btn-submit">Envoyer le message</button>
+      </form>
+    </div>
+
+  </div>
+</section>
+
   </section>
 
   <!-- Scripts -->
